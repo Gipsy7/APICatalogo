@@ -33,6 +33,19 @@ namespace APICatalogo.Controllers
             }
         }
 
+        [HttpGet("GetCategoryWithProducts")]
+        public ActionResult<IEnumerable<Category>> GetCategoryWithProducts()
+        {
+            try
+            {
+                return _context.Categories.Include(x => x.Products).ToList();
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Erro ao tentar obter as categorias do banco de dados");
+            }
+        }
+
         [HttpGet("{id}", Name = "GetCategory")]
         public ActionResult<Category> Get(int id)
         {
