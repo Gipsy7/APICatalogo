@@ -10,7 +10,7 @@ namespace APICatalogo.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20220330130814_populadb")]
-    partial class populadb
+    partial class Populadb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

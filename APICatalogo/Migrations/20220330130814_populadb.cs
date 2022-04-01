@@ -2,7 +2,7 @@
 
 namespace APICatalogo.Migrations
 {
-    public partial class populadb : Migration
+    public partial class Populadb : Migration
     {
         protected override void Up(MigrationBuilder mb)
         {
